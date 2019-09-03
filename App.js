@@ -52,7 +52,18 @@ const RootStack = createStackNavigator(
     headerMode: 'none',
   },
 );
-const Tabs = createBottomTabNavigator({RootStack});
+const AppBottomNavigator = {
+  Home: {
+    screen: HomeScreen,
+  },
+  Details: {
+    screen: DetailsScreen,
+  },
+};
+
+// const Tabs = createBottomTabNavigator({RootStack});
+const Tabs = createBottomTabNavigator(AppBottomNavigator);
+
 const AppContainer = createAppContainer(Tabs);
 export default class App extends React.Component {
   render() {
