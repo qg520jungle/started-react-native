@@ -21,7 +21,7 @@ class DetailsScreen extends React.Component {
     const otherParam = params ? params.otherParam : null;
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Details Screen</Text>
+        <Text>Details Screen4</Text>
         <Text>itemId: {JSON.stringify(itemId)}</Text>
         <Text>otherParam: {JSON.stringify(otherParam)}</Text>
         <Button
@@ -33,10 +33,6 @@ class DetailsScreen extends React.Component {
         <Button
           title="Go back"
           onPress={() => this.props.navigation.goBack()}
-        />
-        <Button
-          title="Go Details4"
-          onPress={() => this.props.navigation.navigate('Details4')}
         />
         <Button
           title="Home"

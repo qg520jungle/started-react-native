@@ -68,6 +68,7 @@ class HomeScreen extends React.Component {
             this.props.navigation.navigate('Details', {
               itemId: this.state.count,
               otherParam: 'First Details',
+              name: '动态的',
             })
           }
           // onPress={() => {
@@ -78,6 +79,30 @@ class HomeScreen extends React.Component {
           //     }),
           //   );
           // }}
+        />
+        <Button
+          title="Go to Details2"
+          onPress={() => this.props.navigation.navigate('Details2')}
+        />
+        <Button
+          title="Go to Details3"
+          onPress={() =>
+            this.props.navigation.navigate('Details3', {
+              name: 'dev io',
+            })
+          }
+        />
+        <Button
+          title="Go to Bottom"
+          onPress={() => this.props.navigation.navigate('Bottom')}
+        />
+        <Button
+          title="Go to Top"
+          onPress={() => this.props.navigation.navigate('Top')}
+        />
+        <Button
+          title="Go to DrawerNav"
+          onPress={() => this.props.navigation.navigate('DrawerNav')}
         />
       </View>
     );
